@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="update_sure">立即更新</string>
+    <string name="update_cancel">取消</string>
+    <string name="update_title">版本更新 V%s</string>
+</resources>
