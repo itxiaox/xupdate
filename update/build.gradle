@@ -1,7 +1,6 @@
 //apply from : './gradleBintrayPluginPublicationsUpload.gradle'
 plugins {
     id 'com.android.library'
-    id "com.jfrog.bintray"
 }
 
 android {
@@ -32,7 +31,6 @@ android {
 dependencies {
     implementation "androidx.appcompat:appcompat:1.1.0"
 }
-apply from : 'F:\\Android\\demo\\Update\\bintray.gradle'
 //方法一
 //发布到本地的maven仓库
 //apply plugin: 'maven'
