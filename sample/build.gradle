@@ -37,11 +37,5 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-
-//    implementation project(path: ':update')
-//    implementation "com.github.itxiaox.update:update:1.0.3"
-//    url "https://dl.bintray.com/itxiaox/andorid"
-//    implementation 'com.github.itxiaox.update:update:1.0.3'
-    implementation 'com.github.itxiaox:XUpdate:v1.0.1'
-//    implementation 'com.gitee.baichuang:Update:V1.0'
+    implementation 'com.github.itxiaox:XUpdate:1.0.2'
 }
