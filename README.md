@@ -20,7 +20,7 @@ allprojects {
 
 ```
 dependencies {
-	          implementation 'com.github.itxiaox:XUpdate:v1.0.1'
+	          implementation 'com.github.itxiaox:XUpdate:1.0.2'
 	}
 ```
 
