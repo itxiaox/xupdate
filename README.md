@@ -25,17 +25,18 @@ dependencies {
 ```
 
 3.  代码中使用
-```
-     UpdateInfo updateInfo = new UpdateInfo();
-        updateInfo.setVersionCode(versionCode);
-        updateInfo.setVersionName(versionName);
-        updateInfo.setDownloadUrl(apkUrl);
-        updateInfo.setMd5(md5);
-        updateInfo.setDesc(apkDesc);
-        if (ApkController.hasRootPerssion()){
-            //有root权限直接下载
-            UpdateManager.getInstance().update(updateInfo);
-        }else {//没有root权限，弹窗提示
-            UpdateDialog.showUpdateDialog(mActivity,updateInfo);
-        }
+```         
+ 	//UpdateInfo信息可以通过版本更新接口获取
+        UpdateInfo updateInfo = new UpdateInfo();
+	updateInfo.setVersionCode(versionCode);
+	updateInfo.setVersionName(versionName);
+	updateInfo.setDownloadUrl(apkUrl);
+	updateInfo.setMd5(md5);
+	updateInfo.setDesc(apkDesc);
+	if (ApkController.hasRootPerssion()){
+	    //有root权限直接下载
+	    UpdateManager.getInstance().update(updateInfo);
+	}else {//没有root权限，弹窗提示
+	    UpdateDialog.showUpdateDialog(mActivity,updateInfo);
+	}
 ```
