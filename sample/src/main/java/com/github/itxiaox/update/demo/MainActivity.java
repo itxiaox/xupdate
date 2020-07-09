@@ -9,7 +9,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.github.itxiaox.update.UpdateManager;
 import com.github.itxiaox.update.apk.ApkController;
+import com.github.itxiaox.update.apk.UpdateInfo;
 import com.github.itxiaox.update.slient.SilentUpdateUtil;
+import com.github.itxiaox.update.ui.UpdateDialog;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -22,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         textView = findViewById(R.id.tv_show);
-        textView.setText("new apk");
     }
 
     public void isRoot(View view) {
@@ -36,7 +37,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void normalInstall(View view) {
-        String filePath = "/sdcard/new.apk";
-        ApkController.normalInstallApk(this,filePath);
+//        String filePath = "/sdcard/new.apk";
+//        ApkController.normalInstallApk(this,filePath);
+        //UpdateManager.getInstance()
+        UpdateInfo updateInfo = new UpdateInfo();
+        updateInfo.setVersionCode(101);
+        updateInfo.setVersionName("1.0.1");
+        updateInfo.setDesc("1.新增功能 2.修复bug 3.提高性能");
+        updateInfo.setDownloadUrl("http://www.baidu.com");
+        updateInfo.setMd5("");
+        UpdateDialog.showUpdateDialog(this, updateInfo);
     }
 }

@@ -28,28 +28,9 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 }
+//需要FileProvider，所以需要添加下面依赖
 dependencies {
     implementation "androidx.appcompat:appcompat:1.1.0"
 }
-//方法一
-//发布到本地的maven仓库
-//apply plugin: 'maven'
-//uploadArchives {
-//    repositories {
-//        mavenDeployer {
-//            pom.project {
-//                // 自定义的项目分组
-//                groupId 'com.github.itxiaox.update'
-//                // 自定义项目名称
-//                artifactId 'update'
-//                // 项目版本号
-//                version '1.0.2'
-//            }
-//            // 自定义本地仓库路径，此处是项目根目录下的 repo 目录中
-////            repository(url: uri("../repo"))
-//            repository(url: uri("F:/maven/repo"))
-//        }
-//    }
-//}
 
 
